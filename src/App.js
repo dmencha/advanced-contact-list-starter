@@ -5,6 +5,7 @@ import SearchBar from './SearchBar';
 /* eslint max-len: [1, {"ignoreUrls": true}] */
 class App extends Component {
   constructor() {
+    debugger;
     super();
     this.state = {
       searchText: '',
@@ -42,6 +43,10 @@ class App extends Component {
       ]
 
     };
+  }
+  componentWillMount() {
+    console.log('componentWillMount');
+    debugger;
   }
   handleSearchBarChange(event) {
     this.setState({
