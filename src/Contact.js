@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 /* eslint max-len: [1, {"ignoreUrls": true}] */
 const Contact = props => {
@@ -16,9 +16,9 @@ const Contact = props => {
 };
 
 Contact.propTypes = {
-  avatar: React.PropTypes.string.isRequired,
-  name: React.PropTypes.string.isRequired,
-  occupation: React.PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  occupation: PropTypes.string.isRequired
 };
 
 export default Contact;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Contact from './Contact';
 
 /* eslint max-len: [1, {"ignoreUrls": true}] */
@@ -19,9 +19,9 @@ const ContactList = props => {
   );
 };
 
-ContactList.propTypes = {
-  contacts: React.PropTypes.contacts.array.isRequired
-};
-
 
 export default ContactList;
+
+ContactList.propTypes = {
+  contacts: PropTypes.array.isRequired
+};
