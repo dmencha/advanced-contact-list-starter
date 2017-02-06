@@ -129,3 +129,13 @@ body {
   background: gray;
   color: white;
 }
+
+.contactbuttons {
+  background-color: grey;
+  border: solid white 2px;
+	color:white;
+	text-decoration:none;
+  height: 5%;
+  font-size: 12px;
+  padding: 1%;
+	}

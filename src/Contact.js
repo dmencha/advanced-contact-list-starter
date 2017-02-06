@@ -11,6 +11,13 @@ const Contact = props => {
         <h2>{props.name}</h2>
         {props.occupation}
       </div>
+      <button className="contactbuttons"
+        onClick={props.onSelectClick}> select
+      </button>
+      <button
+        className="deleteSpan contactbuttons"
+        onClick={props.onDeleteClick}> delete
+        </button>
     </li>
   );
 };
@@ -18,7 +25,9 @@ const Contact = props => {
 Contact.propTypes = {
   name: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  occupation: PropTypes.string.isRequired
+  occupation: PropTypes.string.isRequired,
+  onDeleteClick: PropTypes.func.isRequired,
+  onSelectClick: PropTypes.func.isRequired
 };
 
 export default Contact;

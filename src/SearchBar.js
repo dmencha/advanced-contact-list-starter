@@ -2,12 +2,15 @@ import React, { PropTypes } from 'react';
 
 const SearchBar = props => {
   return (
-    <input
-      className="search-bar"
-      type="text"
-      value={props.value}
-      onChange={(event) => props.onChange(event)}
-    />
+    <div className="new-contact-form">
+      <label htmlFor="search">Search:</label>
+      <input
+        className="search-bar"
+        type="text"
+        value={props.value}
+        onChange={(event) => props.onChange(event)}
+      />
+    </div>
   );
 };
 
