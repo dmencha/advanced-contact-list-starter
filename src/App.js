@@ -50,7 +50,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:4000/contacts')
+    axios.get('http://localhost:3001/contacts')
     .then(resp => {
       this.setState({
         contacts: resp.data
@@ -69,7 +69,7 @@ class App extends Component {
   }
 
   handleAddContact(attributes) {
-    axios.post('http://localhost:4000/contacts', attributes)
+    axios.post('http://localhost:3001/contacts', attributes)
       .then(resp => {
         this.setState({
           contacts: [...this.state.contacts, resp.data]
@@ -79,7 +79,7 @@ class App extends Component {
   }
 
   handleDeleteContact(_id) {
-    axios.delete(`http://localhost:4000/contacts/${_id}`)
+    axios.delete(`http://localhost:3001/contacts/${_id}`)
         .then(resp => {
           const newContacts = this.state.contacts.filter(contact => contact._id !== _id);
 
@@ -97,6 +97,7 @@ class App extends Component {
         <ContactForm
           onSubmit={this.handleAddContact.bind(this)}
         />
+
         <SearchBar
           value={this.state.searchText}
           onChange={this.handleSearchBarChange.bind(this)}
